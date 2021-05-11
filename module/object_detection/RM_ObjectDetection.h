@@ -11,9 +11,9 @@
 namespace ObjectDetection
 {
 // 相对路径，用的时候改成绝对路径
-const std::string yolov4_cfg = " ";
-const std::string yolov4_weights = " ";
-const std::string classes = " ";
+const std::string yolov4_cfg = "common/yolo/model/";
+const std::string yolov4_weights = "common/yolo/weights/";
+const std::string classes = "common/yolo/classes/";
 
 class CvYolov4
 {
@@ -31,4 +31,4 @@ private:
 
 } // namespace ObjectDetection
 
-#endif // RM_OBJECTDETECTION_H
+#endif // !RM_OBJECTDETECTION_H

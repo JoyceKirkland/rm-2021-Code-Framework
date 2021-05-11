@@ -16,7 +16,6 @@ CvYolov4::CvYolov4()
   }
 
   // 加载模型的标签集
-  class_names;
   std::ifstream ifs_classes(classes);
   if (ifs_classes.is_open()) {
     std::string class_name = "";
@@ -32,19 +31,19 @@ CvYolov4::~CvYolov4()
 }
 
 void CvYolov4::objDetection(cv::Mat &input_img, std::vector<cv::Rect> &obj_boxes){
-  cv::Mat input_blob = cv::dnn::blobFromImage(input_img, 1 / 255.F, input_img.size(), cv::Scalar(), true, false);
+  cv::Mat input_blob = cv::dnn::blobFromImage(input_img, 1 / 256.F, input_img.size(), cv::Scalar(), true, false);
   
   net.setInput(input_blob);
 
   std::vector<cv::Mat> outs;
   net.forward(outs, out_names);
 
-  // runtime
-  std::vector<double> layers_time;
-  double freq = cv::getTickFrequency() / 1000;
-  double time = net.getPerfProfile(layers_time) / freq;
-  std::string run_time = "run time: " + std::to_string(time) + "ms";
-  cv::putText(input_img, run_time, cv::Point(20, 20), 0, 0.5, cv::Scalar::all(255));
+  // // runtime
+  // std::vector<double> layers_time;
+  // double freq = cv::getTickFrequency() / 1000;
+  // double time = net.getPerfProfile(layers_time) / freq;
+  // std::string run_time = "run time: " + std::to_string(time) + "ms";
+  // cv::putText(input_img, run_time, cv::Point(20, 20), 0, 0.5, cv::Scalar::all(255));
 
   std::vector<cv::Rect> boxes;     // box
   std::vector<int> class_id;       // label
@@ -86,7 +85,7 @@ void CvYolov4::objDetection(cv::Mat &input_img, std::vector<cv::Rect> &obj_boxes
     obj_boxes.push_back(box);
     
     std::string label = class_names[class_id[idx]];
-    putText(input_img, label.c_str(), box.tl(), cv::FONT_HERSHEY_SIMPLEX, 1.0, cv::Scalar(255, 0, 0), 2, 8);
+    putText(input_img, label.c_str(), box.tl(), cv::FONT_HERSHEY_SIMPLEX, 1.0, cv::Scalar(0, 255, 0), 2, 8);
     rectangle(input_img, box, cv::Scalar::all(255), 2, 8, 0);
   }
   
