@@ -1,14 +1,15 @@
 #include "RM_DNN_Yolov4.h"
 
+namespace NN_Module {
 namespace ObjectDetection
 {
 
-DNN_Yolov4::DNN_Yolov4( const std::string yolov4_cfg_,
-                        const std::string yolov4_weights_,
-                        const std::string classes_,
-                        const cv::dnn::Backend& backend_,
-                        const cv::dnn::Target&  target_)
-  :Abstract_ObjectDetection(backend_, target_)        
+DNN_Yolov4::DNN_Yolov4( const std::string         yolov4_cfg_,
+                        const std::string         yolov4_weights_,
+                        const std::string         classes_,
+                        const cv::dnn::Backend&   backend_,
+                        const cv::dnn::Target&    target_)
+  :Abstract_NN_Module(backend_, target_)        
 {
   // 加载模型
   this->net = cv::dnn::readNetFromDarknet(yolov4_cfg_, yolov4_weights_);
@@ -96,3 +97,4 @@ void DNN_Yolov4::objDetection(cv::Mat &input_img, std::vector<cv::Rect> &obj_box
 } // void objDetection()
 
 } // namespace ObjectDetection
+} // namespace NN_Module

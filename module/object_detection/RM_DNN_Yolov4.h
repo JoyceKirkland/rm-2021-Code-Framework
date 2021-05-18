@@ -3,17 +3,18 @@
 
 #include "Abstract_ObjectDetection.h"
 
+namespace NN_Module {
 namespace ObjectDetection
 {
 
-class DNN_Yolov4 : public Abstract_ObjectDetection
+class DNN_Yolov4 : public Abstract_NN_Module
 {
 public:
-  DNN_Yolov4( const std::string yolov4_cfg,
-              const std::string yolov4_weights,
-              const std::string classes,
-              const cv::dnn::Backend& backend_,
-              const cv::dnn::Target&  target_);
+  DNN_Yolov4( const std::string         yolov4_cfg,
+              const std::string         yolov4_weights,
+              const std::string         classes,
+              const cv::dnn::Backend&   backend_,
+              const cv::dnn::Target&    target_);
 
   ~DNN_Yolov4();
 
@@ -25,5 +26,6 @@ private:
 };
 
 } // namespace ObjectDetection
+} // namespace NN_Module
 
 #endif // !RM_DNN_YOLOV4_H
