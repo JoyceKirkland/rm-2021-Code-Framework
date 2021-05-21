@@ -1,5 +1,5 @@
-#ifndef RM_DNN_YOLOV4_H
-#define RM_DNN_YOLOV4_H
+#ifndef RM_DNN_YOLOV4_H_
+#define RM_DNN_YOLOV4_H_
 
 #include "Abstract_ObjectDetection.h"
 
@@ -28,4 +28,4 @@ private:
 } // namespace ObjectDetection
 } // namespace NN_Module
 
-#endif // !RM_DNN_YOLOV4_H
+#endif // !RM_DNN_YOLOV4_H_

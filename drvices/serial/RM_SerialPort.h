@@ -1,5 +1,5 @@
-#ifndef RM_SERIALPORT_H
-#define RM_SERIALPORT_H
+#ifndef RM_SERIALPORT_H_
+#define RM_SERIALPORT_H_
 
 #include "Abstract_SerialPort.h"
 
@@ -15,4 +15,4 @@ public:
 
 } // namespace serial_port
 
-#endif // !RM_SERIALPORT_H
+#endif // !RM_SERIALPORT_H_

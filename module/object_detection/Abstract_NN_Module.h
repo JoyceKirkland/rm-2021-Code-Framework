@@ -12,8 +12,8 @@
  * @copyright Copyright (c) 2021 GCU Robot Lab. All Rights Reserved.
  * 
  */
-#ifndef ABSTRACT_NN_MODULE_H
-#define ABSTRACT_NN_MODULE_H
+#ifndef ABSTRACT_NN_MODULE_H_
+#define ABSTRACT_NN_MODULE_H_
 
 #include <iostream>
 #include <fstream>
@@ -53,4 +53,4 @@ protected:
 
 } // namespace NN_Module
 
-#endif // !ABSTRACT_NN_MODULE_H
+#endif // !ABSTRACT_NN_MODULE_H_

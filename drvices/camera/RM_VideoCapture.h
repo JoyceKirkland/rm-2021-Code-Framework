@@ -6,8 +6,8 @@
  * @date 2019-05-06
  * @copyright Copyright (c) 2019 GCU Robot Lab. All Rights Reserved.
  */
-#ifndef RM_VIDEOCAPTURE_H
-#define RM_VIDEOCAPTURE_H
+#ifndef RM_VIDEOCAPTURE_H_
+#define RM_VIDEOCAPTURE_H_
 
 #include <CameraApi.h>
 /*---工业相机中使用到 opencv2.0 的 IplImage 需要包含此头文件 ---*/
@@ -42,4 +42,4 @@ public:
   int cameraSet();
 };
 
-#endif // RM_VIDEOCAPTURE_H
+#endif // !RM_VIDEOCAPTURE_H_

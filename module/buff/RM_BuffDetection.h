@@ -1,5 +1,5 @@
-#ifndef RM_BUFFDETECTION_H
-#define RM_BUFFDETECTION_H
+#ifndef RM_BUFFDETECTION_H_
+#define RM_BUFFDETECTION_H_
 
 namespace buff {
 

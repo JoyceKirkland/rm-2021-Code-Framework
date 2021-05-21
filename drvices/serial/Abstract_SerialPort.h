@@ -15,6 +15,9 @@
  * @copyright GCU Robot Lab. All Rights Reserved.
  * 
  */
+#ifndef RM_ABSTRACT_SERIALPORT_H_
+#define RM_ABSTRACT_SERIALPORT_H_
+
 #include <string.h>
 #include <fcntl.h>  //文件控制定义
 #include <termios.h>   //POSIX终端控制定义
@@ -141,3 +144,5 @@ protected:
 };
 
 } // namespace serial_port
+
+#endif // !RM_ABSTRACT_SERIALPORT_H_

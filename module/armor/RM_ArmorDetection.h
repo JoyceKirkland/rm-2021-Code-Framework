@@ -1,5 +1,5 @@
-#ifndef RM_ARMORDETECTION_H
-#define RM_ARMORDETECTION_H
+#ifndef RM_ARMORDETECTION_H_
+#define RM_ARMORDETECTION_H_
 
 #include <iostream>
 #include <boost>
@@ -19,4 +19,4 @@ public:
 
 } // namespace armor
 
-#endif // !RM_ARMORDETECTION_H
+#endif // !RM_ARMORDETECTION_H_
