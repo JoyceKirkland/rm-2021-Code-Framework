@@ -1,7 +1,7 @@
 #ifndef RM_DNN_YOLOV4_H_
 #define RM_DNN_YOLOV4_H_
 
-#include "Abstract_ObjectDetection.h"
+#include "abstract_nn_module.h"
 
 namespace NN_Module {
 namespace ObjectDetection

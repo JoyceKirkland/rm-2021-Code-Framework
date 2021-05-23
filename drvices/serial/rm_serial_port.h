@@ -1,7 +1,7 @@
 #ifndef RM_SERIALPORT_H_
 #define RM_SERIALPORT_H_
 
-#include "Abstract_SerialPort.h"
+#include "abstract_serial_port.h"
 
 namespace serial_port {
 class RM_SerialPort : public Abstract_SerialPort {

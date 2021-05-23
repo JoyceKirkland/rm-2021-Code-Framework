@@ -6,7 +6,7 @@
  * @date 2019-05-06
  * @copyright Copyright (c) 2019 GCU Robot Lab. All Rights Reserved.
  */
-#include "drvices/camera/RM_VideoCapture.h"
+#include "drvices/camera/rm_video_capture.h"
 
 /**
  * @brief Construct a new RM_VideoCapture::RM_VideoCapture object

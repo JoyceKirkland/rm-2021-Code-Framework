@@ -1,4 +1,4 @@
-#include "RM_DNN_Yolov4.h"
+#include "rm_dnn_yolov4.h"
 
 namespace NN_Module {
 namespace ObjectDetection
