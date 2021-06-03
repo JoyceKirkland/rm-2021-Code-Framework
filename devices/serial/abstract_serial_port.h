@@ -18,14 +18,14 @@
 #ifndef RM_ABSTRACT_SERIALPORT_H_
 #define RM_ABSTRACT_SERIALPORT_H_
 
+#include <iostream>
 #include <string.h>
+
 #include <fcntl.h>  //文件控制定义
 #include <termios.h>   //POSIX终端控制定义
 #include <unistd.h>    //UNIX标准定义
 #include <errno.h>     //ERROR数字定义
 #include <sys/select.h>
-
-#include <iostream>
 
 namespace serial_port {
 
@@ -33,6 +33,7 @@ namespace serial_port {
  * @brief Abstract class of serial port
  * 
  */
+template<typename T>
 class Abstract_SerialPort {
 
 public:
@@ -40,9 +41,22 @@ public:
     /**
      * @brief Construct a new Abstract_SerialPort object
      * 
-     * @param[in] BAUDRATE_ 波特率
+     * @param[in] _BAUDRATE           波特率
+     * @param[in] _write_buff_len     写入串口的字符数组长度
+     * @param[in] _receive_buff_len   读取串口的字符数组长度
+     * @param[in] _crc_buff_len       放入CRC校验的字符数组长度
      */
-    explicit Abstract_SerialPort(const int BAUDRATE_){
+    Abstract_SerialPort(const int _BAUDRATE,
+                        const int _write_buff_len,
+                        const int _receive_buff_len,
+                        const int _crc_buff_len){
+      
+      // 初始化三个数组
+      write_buff_ = new T[_write_buff_len];
+      receive_buff_ = new T[_receive_buff_len];
+      crc_buff_ = new T[_crc_buff_len];
+
+      
       std::cout<<"The Serial set ......"<<std::endl;
       
       /* WARNING :  终端设备默认会设置为控制终端，因此open(O_NOCTTY不作为控制终端)
@@ -64,7 +78,7 @@ public:
       }
 
       // 设置 波特率
-      switch (BAUDRATE_)
+      switch (_BAUDRATE)
       {
       case 115200:{
         cfsetospeed(&newstate, B115200);
@@ -81,7 +95,7 @@ public:
         cfsetispeed(&newstate, B115200);
       } break;
       
-      } // switch (BADNRATE_)
+      } // switch (_BADNRATE)
 
       //本地连线, 取消控制功能 | 开始接收
       newstate.c_cflag |= CLOCAL | CREAD;
@@ -108,12 +122,50 @@ public:
      * 
      */
     virtual ~Abstract_SerialPort(){
+      delete this->write_buff_;
+      delete this->receive_buff_;
+      delete this->crc_buff_;
+
       if (!close(fd))
         printf("Close Serial Port Successful\n");
     }
 
+    /**
+     * @brief CRC8校验函数
+     * 
+     * @param[in] buf 需要检验的字符串
+     * @param[in] len 字符串的长度
+     * @return uint8_t CRC校验后的数组
+     */
+    static uint8_t checkSum_CRC8(char *buf, uint16_t len){
+      uint8_t check = 0;
+
+      while(len--)
+      {
+        check = CRC8TAB[check^(*buf++)];
+      }
+
+      return (check)&0x00ff;
+    }
+
+    /**
+     * @brief 串口写入函数
+     * 
+     */
+    void serialWrite() { }
+
+    /**
+     * @brief 串口读取函数
+     * 
+     */
+    void serialRead() { } 
+
 protected:
   static int fd;
+
+  T* write_buff_;
+  T* receive_buff_;
+  T* crc_buff_;
 
   static constexpr char* DeviceName[6] = {
     "", 
@@ -123,7 +175,7 @@ protected:
     "/dev/ttyUSB3",
     "/dev/ttyUSB4"};
 
-  static constexpr unsigned char CRC8TAB[300] = {
+  static constexpr u_char CRC8TAB[300] = {
     0,94,188,226,97,63,221,131,194,156,126,32,163,253,31,65,
     157,195,33,127,252,162,64,30, 95,1,227,189,62,96,130,220,
     35,125,159,193,66,28,254,160,225,191,93,3,128,222,60,98,

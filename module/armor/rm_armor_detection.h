@@ -1,13 +1,14 @@
 #ifndef RM_ARMORDETECTION_H_
 #define RM_ARMORDETECTION_H_
 
+#include "module/angle_solve/rm_solve_pnp.h"
+#include "module/filter/rm_kalman_filter.h"
+#include "devices/serial/rm_serial_port.h"
+
 #include <iostream>
-#include <boost>
 
 namespace armor{
-
-typedef boost::shared_ptr<RM_ArmorDetector> RM_ArmorDetector_Ptr;
-
+  
 class RM_ArmorDetector
 {
 private:
