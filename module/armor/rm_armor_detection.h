@@ -135,20 +135,20 @@ class RM_ArmorDetector {
 
   cv::Mat draw_img_;  //画板
   cv::Mat gray_img_;
-  cv::Mat hsv_img;
-  cv::Mat bin_gray_img;
-  cv::Mat bin_color_img;
+  cv::Mat hsv_img_;
+  cv::Mat bin_gray_img_;
+  cv::Mat bin_color_img_;
   cv::Mat armor_trackbar_ = cv::Mat::zeros(1, 300, CV_8UC1);
-  cv::Rect armor_roi;
-  cv::Point lost_armor_center;
-  cv::Point armor_center;  //装甲板中心点
+  cv::Rect armor_roi_;
+  cv::Point lost_armor_center_;
+  cv::Point armor_center_;  //装甲板中心点
 
   std::vector<Armor_Data> armor_;
   std::vector<cv::RotatedRect> light_;
 
-  bool lost_armor_success = false;
-  bool armor_success = false;
-  bool switch_armor = false;  //切换装甲板
+  bool lost_armor_success_ = false;
+  bool armor_success_ = false;
+  bool switch_armor_ = false;  //切换装甲板
 };
 }  // namespace armor
 

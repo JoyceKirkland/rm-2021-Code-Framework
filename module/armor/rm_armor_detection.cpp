@@ -73,8 +73,8 @@ float Distance(cv::Point a, cv::Point b) {
  *
  */
 void RM_ArmorDetector::free_Memory() {
-  lost_armor_success = armor_success;
-  armor_success = false;
+  lost_armor_success_ = armor_success_;
+  armor_success_ = false;
   if (light_.size() > 0) {
     light_.clear();
     std::vector<cv::RotatedRect>(light_).swap(light_);
@@ -94,7 +94,7 @@ bool RM_ArmorDetector::find_Light() {
   /*轮廓周长*/
   int perimeter = 0;
   std::vector<std::vector<cv::Point>> contours;
-  cv::findContours(bin_color_img, contours, cv::RETR_EXTERNAL,
+  cv::findContours(bin_color_img_, contours, cv::RETR_EXTERNAL,
                    cv::CHAIN_APPROX_NONE);
   //筛选，去除一部分矩形
   for (size_t i = 0; i < contours.size(); i++) {
@@ -112,12 +112,15 @@ bool RM_ArmorDetector::find_Light() {
     }
 
     //灯条长宽比
-    float light_w_h;
-    float _h = MAX(box.size.width, box.size.height);
-    float _w = MIN(box.size.width, box.size.height);
+    static float light_w_h;
+    static float _h = MAX(box.size.width, box.size.height);
+    static float _w = MIN(box.size.width, box.size.height);
     light_w_h = _h / _w;
     // cout << light_w_h << endl;
-    if (fabs(box.angle) < 40 && light_w_h < 15 && light_w_h > 3) {
+    if (fabs(box.angle) < (light_config_.angle_max * 0.1) &&
+        fabs(box.angle) > (light_config_.angle_min * 0.1) &&
+        light_w_h < (light_config_.ratio_w_h_max * 0.1) &&
+        light_w_h > (light_config_.ratio_w_h_min * 0.1)) {
       this->light_.push_back(box);  //保存灯条
 
       if (light_config_.light_draw == 1) {
@@ -370,13 +373,13 @@ int RM_ArmorDetector::average_Color() {
   if (_rect.y <= 0) {
     _rect.y = 0;
   }
-  if (_rect.y + _rect.height >= bin_gray_img.rows) {
-    _rect.height = bin_gray_img.rows - _rect.y;
+  if (_rect.y + _rect.height >= bin_gray_img_.rows) {
+    _rect.height = bin_gray_img_.rows - _rect.y;
   }
-  if (_rect.x + _rect.width >= bin_gray_img.cols) {
-    _rect.width = bin_gray_img.cols - _rect.x;
+  if (_rect.x + _rect.width >= bin_gray_img_.cols) {
+    _rect.width = bin_gray_img_.cols - _rect.x;
   }
-  static cv::Mat roi = bin_gray_img(_rect);
+  static cv::Mat roi = bin_gray_img_(_rect);
   int average_intensity = static_cast<int>(mean(roi).val[0]);
 
   return average_intensity;
@@ -394,12 +397,14 @@ int RM_ArmorDetector::average_Color() {
 void RM_ArmorDetector::run_Image(cv::Mat &_src_img, const int _my_color) {
   switch (image_config_.method) {
     case 0:
-      bin_color_img = this->fuse_Image(this->gray_Pretreat(_src_img, _my_color),
-                                       this->bgr_Pretreat(_src_img, _my_color));
+      bin_color_img_ =
+          this->fuse_Image(this->gray_Pretreat(_src_img, _my_color),
+                           this->bgr_Pretreat(_src_img, _my_color));
       break;
     default:
-      bin_color_img = this->fuse_Image(this->gray_Pretreat(_src_img, _my_color),
-                                       this->hsv_Pretreat(_src_img, _my_color));
+      bin_color_img_ =
+          this->fuse_Image(this->gray_Pretreat(_src_img, _my_color),
+                           this->hsv_Pretreat(_src_img, _my_color));
       break;
   }
 }
@@ -438,7 +443,7 @@ cv::Mat RM_ArmorDetector::gray_Pretreat(cv::Mat &_src_img,
                            &image_config_.blue_armor_gray_th, 255, NULL);
         cv::imshow("gray_trackbar", this->gray_trackbar_);
       }
-      cv::threshold(gray_img_, bin_gray_img, image_config_.blue_armor_gray_th,
+      cv::threshold(gray_img_, bin_gray_img_, image_config_.blue_armor_gray_th,
                     255, cv::THRESH_BINARY);
       break;
     default:
@@ -448,14 +453,14 @@ cv::Mat RM_ArmorDetector::gray_Pretreat(cv::Mat &_src_img,
                            &image_config_.red_armor_gray_th, 255, NULL);
         cv::imshow("gray_trackbar", this->gray_trackbar_);
       }
-      cv::threshold(gray_img_, bin_gray_img, image_config_.red_armor_gray_th,
+      cv::threshold(gray_img_, bin_gray_img_, image_config_.red_armor_gray_th,
                     255, cv::THRESH_BINARY);
       break;
   }
   if (image_config_.gray_edit) {
-    cv::imshow("gray_trackbar", bin_gray_img);
+    cv::imshow("gray_trackbar", bin_gray_img_);
   }
-  return bin_gray_img;
+  return bin_gray_img_;
 }
 
 /**
@@ -470,36 +475,35 @@ cv::Mat RM_ArmorDetector::gray_Pretreat(cv::Mat &_src_img,
 cv::Mat RM_ArmorDetector::bgr_Pretreat(cv::Mat &_src_img, const int _my_color) {
   static std::vector<cv::Mat> _split;
   cv::split(_src_img, _split);
-  static cv::Mat bin_color_img;
   switch (_my_color) {
     case 0:
 
-      cv::subtract(_split[0], _split[2], bin_color_img);  // r - b
+      cv::subtract(_split[0], _split[2], bin_color_img_);  // r - b
       if (image_config_.color_edit) {
         cv::namedWindow("color_trackbar");
         cv::createTrackbar("blue_color_th", "color_trackbar",
                            &image_config_.blue_armor_color_th, 255, NULL);
         cv::imshow("color_trackbar", this->bgr_trackbar_);
       }
-      cv::threshold(bin_color_img, bin_color_img,
+      cv::threshold(bin_color_img_, bin_color_img_,
                     image_config_.blue_armor_color_th, 255, cv::THRESH_BINARY);
       break;
     default:
-      cv::subtract(_split[2], _split[0], bin_color_img);  // b - r
+      cv::subtract(_split[2], _split[0], bin_color_img_);  // b - r
       if (image_config_.color_edit) {
         cv::namedWindow("color_trackbar");
         cv::createTrackbar("red_color_th", "color_trackbar",
                            &image_config_.red_armor_color_th, 255, NULL);
         cv::imshow("color_trackbar", this->bgr_trackbar_);
       }
-      cv::threshold(bin_color_img, bin_color_img,
+      cv::threshold(bin_color_img_, bin_color_img_,
                     image_config_.red_armor_color_th, 255, cv::THRESH_BINARY);
       break;
   }
   if (image_config_.gray_edit) {
-    cv::imshow("color_trackbar", bin_color_img);
+    cv::imshow("color_trackbar", bin_color_img_);
   }
-  return bin_color_img;
+  return bin_color_img_;
 }
 
 /**
@@ -512,7 +516,7 @@ cv::Mat RM_ArmorDetector::bgr_Pretreat(cv::Mat &_src_img, const int _my_color) {
  * @return cv::Mat
  */
 cv::Mat RM_ArmorDetector::hsv_Pretreat(cv::Mat &_src_img, const int _my_color) {
-  cv::cvtColor(_src_img, hsv_img, cv::COLOR_BGR2HSV_FULL);
+  cv::cvtColor(_src_img, hsv_img_, cv::COLOR_BGR2HSV_FULL);
   switch (_my_color) {
     case 0:
 
@@ -532,12 +536,12 @@ cv::Mat RM_ArmorDetector::hsv_Pretreat(cv::Mat &_src_img, const int _my_color) {
                            &image_config_.v_red_max, 255, NULL);
         cv::imshow("hsv_trackbar", this->hsv_trackbar_);
       }
-      cv::inRange(hsv_img,
+      cv::inRange(hsv_img_,
                   cv::Scalar(image_config_.h_blue_min, image_config_.s_blue_min,
                              image_config_.v_blue_min),
                   cv::Scalar(image_config_.h_blue_max, image_config_.s_blue_max,
                              image_config_.v_blue_max),
-                  bin_color_img);
+                  bin_color_img_);
       break;
     default:
       if (image_config_.color_edit) {
@@ -557,20 +561,20 @@ cv::Mat RM_ArmorDetector::hsv_Pretreat(cv::Mat &_src_img, const int _my_color) {
         cv::imshow("hsv_trackbar", this->hsv_trackbar_);
       }
 
-      cv::inRange(hsv_img,
+      cv::inRange(hsv_img_,
                   cv::Scalar(image_config_.h_red_min, image_config_.s_red_min,
                              image_config_.v_red_min),
                   cv::Scalar(image_config_.h_red_max, image_config_.s_red_max,
                              image_config_.v_red_max),
-                  bin_color_img);
+                  bin_color_img_);
 
       break;
   }
   if (image_config_.gray_edit) {
-    cv::imshow("hsv_trackbar", bin_color_img);
+    cv::imshow("hsv_trackbar", bin_color_img_);
   }
 
-  return bin_color_img;
+  return bin_color_img_;
 }
 
 }  // namespace armor

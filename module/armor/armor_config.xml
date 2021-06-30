@@ -73,7 +73,7 @@
  * @brief: 绘制灯条
  */ 0 关闭 1 开启
 -->
-<LIGHT_DRAW>1</LIGHT_DRAW>
+<LIGHT_DRAW>0</LIGHT_DRAW>
 <!--
 /**
  * @brief: 灯条调参
@@ -85,8 +85,8 @@
  * @brief: 灯条宽高比范围
  */
 -->
-<LIGHT_RATIO_W_H_MIN>1</LIGHT_RATIO_W_H_MIN>
-<LIGHT_RATIO_W_H_MAX>8</LIGHT_RATIO_W_H_MAX>
+<LIGHT_RATIO_W_H_MIN>30</LIGHT_RATIO_W_H_MIN>
+<LIGHT_RATIO_W_H_MAX>150</LIGHT_RATIO_W_H_MAX>
 
 <!--
 /**
