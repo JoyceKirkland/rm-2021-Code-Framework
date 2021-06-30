@@ -91,75 +91,64 @@ struct Image_Cfg {
  *
  */
 class RM_ArmorDetector {
+  //构造函数
+ public:
+  RM_ArmorDetector() {}
+  RM_ArmorDetector(std::string _armor_config);
+  ~RM_ArmorDetector() {}
+
+  // Image
+ private:
+  cv::Mat gray_trackbar_ = cv::Mat::zeros(1, 300, CV_8UC1);
+  cv::Mat bgr_trackbar_ = cv::Mat::zeros(1, 300, CV_8UC1);
+  cv::Mat hsv_trackbar_ = cv::Mat::zeros(1, 300, CV_8UC1);
+  cv::Mat ele_ = getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(3, 3));
+  Image_Cfg image_config_;
+
+ public:
+  void run_Image(cv::Mat &_src_img, const int _my_color);
+  cv::Mat bgr_Pretreat(cv::Mat &_src_img, const int _my_color);
+  cv::Mat hsv_Pretreat(cv::Mat &_src_img, const int _my_color);
+  cv::Mat gray_Pretreat(cv::Mat &_src_img, const int _my_color);
+  cv::Mat fuse_Image(cv::Mat _bin_gray_img, cv::Mat _bin_color_img);
+
+  //灯条
+ public:
+  bool find_Light();  //寻找灯条
+ private:
+  Light_Cfg light_config_;
+
   //装甲板
  public:
   bool run_Armor(cv::Mat &_src_img, int my_color);
   bool light_Judge(int i, int j);  //判断左右灯条能否组成装甲板
   int average_Color();             //计算图像颜色平均值
-  void fitting_Armor();            //拟合装甲板
-  void find_Light();               //寻找灯条
+  bool fitting_Armor();            //拟合装甲板
   void final_Armor();              //最优装甲板
   void free_Memory();              //释放内存
-  int motion_Direction();          //判断装甲板运动方向
   cv::RotatedRect return_Final_Armor_RotatedRect(int _num);
   int return_Final_Armor_Distinguish(int _num);
-  RM_ArmorDetector() {}
-  RM_ArmorDetector(std::string _armor_config);
-  ~RM_ArmorDetector() {}
 
  private:
   Armor_Cfg armor_config_;
-  Image_Cfg image_config_;
-  Light_Cfg light_config_;
+  Armor_Data armor_data_;
 
-  cv::Mat frame;      //原图
   cv::Mat draw_img_;  //画板
   cv::Mat gray_img_;
   cv::Mat hsv_img;
   cv::Mat bin_gray_img;
   cv::Mat bin_color_img;
   cv::Mat armor_trackbar_ = cv::Mat::zeros(1, 300, CV_8UC1);
-
-  Armor_Data armor_data_;
+  cv::Rect armor_roi;
+  cv::Point lost_armor_center;
+  cv::Point armor_center;  //装甲板中心点
 
   std::vector<Armor_Data> armor_;
   std::vector<cv::RotatedRect> light_;
 
-  cv::Rect armor_roi;
-
-  cv::Point lost_armor_center;
-  cv::Point armor_center;  //装甲板中心点
-
   bool lost_armor_success = false;
   bool armor_success = false;
   bool switch_armor = false;  //切换装甲板
-
-  int lost_distance_armor = 0;  //两帧装甲板之间的距离
-  int amplitude = 0;            //幅度
-  int optimal_armor = 0;        //最优装甲板
-  int armor_position = 0;       //装甲板在车的位置
-  int armor_direction = 0;      // 1向右 -1 向左
-  int num = 0;                  //运行次数
-
-  //图像
- private:
-  cv::Mat gray_trackbar_ = cv::Mat::zeros(1, 300, CV_8UC1);
-  cv::Mat bgr_trackbar_ = cv::Mat::zeros(1, 300, CV_8UC1);
-  cv::Mat hsv_trackbar_ = cv::Mat::zeros(1, 300, CV_8UC1);
-  cv::Mat ele_ = getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(3, 3));
-
- public:
-  void set_Image_Config(Image_Cfg _Image_Config);
-
-  void run_Image(cv::Mat &_src_img, const int _my_color);
-
-  cv::Mat bgr_Pretreat(cv::Mat &_src_img, const int _my_color);
-
-  cv::Mat hsv_Pretreat(cv::Mat &_src_img, const int _my_color);
-
-  cv::Mat gray_Pretreat(cv::Mat &_src_img, const int _my_color);
-
-  cv::Mat fuse_Image(cv::Mat _bin_gray_img, cv::Mat _bin_color_img);
 };
 }  // namespace armor
 

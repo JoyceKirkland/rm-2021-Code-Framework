@@ -89,7 +89,7 @@ void RM_ArmorDetector::free_Memory() {
  * @brief 寻找灯条 通过灯条的长宽、大小和角度 筛选灯条
  *
  */
-void RM_ArmorDetector::find_Light() {
+bool RM_ArmorDetector::find_Light() {
   cv::RotatedRect box;
   /*轮廓周长*/
   int perimeter = 0;
@@ -130,6 +130,11 @@ void RM_ArmorDetector::find_Light() {
       }
     }
   }
+  //灯条少于2 停止运行
+  if (this->light_.size() < 2) {
+    return false;
+  }
+  return true;
 }
 /**
  * @brief 运行
@@ -141,27 +146,16 @@ bool RM_ArmorDetector::run_Armor(cv::Mat &_src_img, int _my_color) {
   //图像处理
   run_Image(_src_img, _my_color);
   draw_img_ = _src_img.clone();
-  //寻找灯条
-  find_Light();
-
-  //灯条少于2 停止运行
-  if (this->light_.size() < 2) {
-    imshow("draw_img", draw_img_);
-    return false;
+  if (find_Light()) {
+    if (fitting_Armor()) {
+      final_Armor();
+      return true;
+    }
   }
-
-  //灯条拟合装甲板
-  fitting_Armor();
-
-  //无装甲
-  if (this->armor_.size() < 1) {
+  if (armor_config_.armor_edit == 1) {
     imshow("draw_img", draw_img_);
-    return false;
   }
-  //多装甲板筛选
-  final_Armor();
-  imshow("draw_img", draw_img_);
-  return true;
+  return false;
 }
 /**
  * @brief 判断大小
@@ -205,7 +199,7 @@ int RM_ArmorDetector::return_Final_Armor_Distinguish(int _num) {
  * @brief 拟合装甲板
  *
  */
-void RM_ArmorDetector::fitting_Armor() {
+bool RM_ArmorDetector::fitting_Armor() {
   //遍历灯条
   for (size_t i = 0; i < this->light_.size(); i++) {
     for (size_t j = i + 1; j < this->light_.size(); j++) {
@@ -233,14 +227,20 @@ void RM_ArmorDetector::fitting_Armor() {
         if (this->light_Judge(light_left, light_right)) {
           if (this->average_Color() < 20) {
             armor_.push_back(armor_data_);
-            //绘制所有装甲板
-            rectangle(draw_img_, armor_data_.armor_rect.boundingRect(),
-                      cv::Scalar(255, 255, 0), 5, 8);
+            if (armor_config_.armor_edit == 1) {
+              //绘制所有装甲板
+              rectangle(draw_img_, armor_data_.armor_rect.boundingRect(),
+                        cv::Scalar(255, 255, 0), 5, 8);
+            }
           }
         }
       }
     }
   }
+  if (this->armor_.size() < 1) {
+    return false;
+  }
+  return true;
 }
 
 /**
@@ -383,11 +383,6 @@ int RM_ArmorDetector::average_Color() {
 }
 
 /*---------------------------------图像----------------------------*/
-void RM_ArmorDetector::set_Image_Config(Image_Cfg _Image_Config) {
-  image_config_ = _Image_Config;
-  std::cout << "预处理参数初始化成功" << std::endl;
-  std::cout << "💚💚💚💚💚💚💚💚💚💚💚💚" << std::endl;
-}
 /**
  * @brief 预处理运行函数
  *
