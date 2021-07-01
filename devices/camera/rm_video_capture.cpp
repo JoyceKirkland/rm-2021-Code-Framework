@@ -6,7 +6,7 @@
  * @date 2019-05-06
  * @copyright Copyright (c) 2019 GCU Robot Lab. All Rights Reserved.
  */
-#include "devices/camera/rm_video_capture.h"
+#include "rm_video_capture.h"
 
 namespace mv_camera {
 
@@ -15,7 +15,7 @@ RM_VideoCapture::RM_VideoCapture(const CameraParam &_camera_param) {
     cameraInit( _camera_param.resolution.cols,
                 _camera_param.resolution.rows,
                 _camera_param.camera_exposuretime);
-    
+
     iscamera0_open = true;
     printf("Set camera Industrial camera 📷📷📷\n");
   } else {

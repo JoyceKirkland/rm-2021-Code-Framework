@@ -1,4 +1,4 @@
-#include "module/armor/rm_armor_detection.h"
+#include "rm_armor_detection.h"
 
 namespace armor {
 

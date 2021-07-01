@@ -1,7 +1,7 @@
 #ifndef RM_SOLVEPNP_H_
 #define RM_SOLVEPNP_H_
 
-#include "module/angle_solve/abstract_solve_pnp.hpp"
+#include "abstract_solve_pnp.hpp"
 
 namespace angle_solve {
 class Rm_Solvepnp : public Abstract_Solvepnp {
