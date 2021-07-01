@@ -4,9 +4,9 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
-#include "devices/serial/rm_serial_port.h"
-#include "module/angle_solve/rm_solve_pnp.h"
-#include "module/filter/rm_kalman_filter.h"
+#include "rm_serial_port.h"
+#include "rm_solve_pnp.h"
+#include "rm_kalman_filter.h"
 
 namespace armor {
 struct Armor_Data {

@@ -6,11 +6,11 @@ namespace mv_camera {
 struct CameraParam {
   int camera_mode;
   int camera_exposuretime;
-  Camera_Resolution resolution;
+    Camera_Resolution resolution;
 
   /**
    * @brief Construct a new User Param object
-   * 
+   *
    * @param[in] _camera_mode              选择相机模式
    * @param[in] _resolution               选择相机分辨率
    * @param[in] _camera_exposuretime      设置相机曝光时间
@@ -20,7 +20,7 @@ struct CameraParam {
               const mv_camera::EXPOSURETIME _camera_exposuretime)
       : camera_mode(_camera_mode),
         resolution(_resolution),
-        camera_exposuretime(_camera_exposuretime) 
+        camera_exposuretime(_camera_exposuretime)
   { }
 
 };
@@ -28,7 +28,7 @@ struct CameraParam {
 enum EXPOSURETIME {
   /**
    * @brief 预设值曝光时间
-   * 
+   *
    */
   DEFAULT_5000 = 5000,
   HIGH_2500 = 2500,
