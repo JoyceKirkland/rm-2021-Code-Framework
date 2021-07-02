@@ -11,7 +11,7 @@ class ImageRoi : public Abstract_ImageRoi
 
  public:
   ImageRoi(/* args */) { }
-  ~ImageRoi() { Abstract_ImageRoi::~Abstract_ImageRoi();}
+  ~ImageRoi() { }
 
   /**
    * @brief   ROI 区域安全处理，防止越界
