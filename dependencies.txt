@@ -1,0 +1,6 @@
+git
+gcc
+gdb
+cmake
+libopencv-dev
+libfmt-dev
