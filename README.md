@@ -7,19 +7,17 @@
 |    PC      | Intel NUC8i5BEK4         |
 |  Camera    | MindVision MV-SUA134GC-T |
 | SerialPort | CP2102N                  |
-|||
 
 ### Software
 
 | name           |        version                 |
 |:--------------:|:------------------------------:|
 | System         | Ubuntu 18.04.05 LTS            |
-| OpenCV         | [`4.4.0`](https://github.com/opencv/opencv/releases/tag/4.4.0)                               |
-| OpenCV_Contrib | [`4.4.0`](https://github.com/opencv/opencv_contrib/releases/tag/4.4.0)                |
+| OpenCV         | [`4.4.0`](https://github.com/opencv/opencv/releases/tag/4.4.0) |
+| OpenCV_Contrib | [`4.4.0`](https://github.com/opencv/opencv_contrib/releases/tag/4.4.0) |
 | CMake          | [`3.10.2`](https://cmake.org/) |
-| GCC            | [`7.5.0`](https://ftp.gnu.org/gnu/gcc/gcc-7.5.0/)      |
-| GDB            | [`8.1.0`](https://www.gnu.org/software/gdb/download/)                           |
-|||
+| GCC            | [`7.5.0`](https://ftp.gnu.org/gnu/gcc/gcc-7.5.0/) |
+| GDB            | [`8.1.0`](https://www.gnu.org/software/gdb/download/) |
 
 ### Contribute
 
