@@ -16,10 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Update sources
+        run: sudo apt update
+          
       - name: Install dependencies
-        run: |
-          sudo apt update |
-          cat dependencies.txt | xargs sudo apt install -y
+        run: cat dependencies.txt | xargs sudo apt install -y
 
       - name: Update submodules
         run: git submodule update
