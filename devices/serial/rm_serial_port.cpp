@@ -1,4 +1,5 @@
 #include "rm_serial_port.h"
+namespace serial_port {
 
 const unsigned char CRC8Tab[300] = {
     0,   94,  188, 226, 97,  63,  221, 131, 194, 156, 126, 32,  163, 253, 31,
@@ -441,3 +442,4 @@ void SerialPort::updateReceiveInformation() {
                                  this->receive_buff_[13]) /
       100.f;
 }
+}  // namespace serial_port
