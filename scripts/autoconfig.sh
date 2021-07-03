@@ -3,8 +3,12 @@
 # Get git submodules
 git submodule update --init --recursive
 
+# Enable pre-commit cpplint
+chmod +x scripts/cpplint-pre-commit.sh
+ln -s scripts/cpplint-pre-commit.sh .git/hooks/pre-commit
+
 # Configure mindvision sdk usb connect rules
-sudo cp 3rdparty/mindvision/linux/88-mvusb.rules /etc/udev/rules.d/
+sudo ln -s 3rdparty/mindvision/linux/88-mvusb.rules /etc/udev/rules.d/
 
 # Update source
 sudo apt update
