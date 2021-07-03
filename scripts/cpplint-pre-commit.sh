@@ -1,13 +1,13 @@
 #!/bin/sh
 
-if git rev-parse --verify HEAD > /dev/null 2 > &1
+if git rev-parse --verify HEAD >/dev/null 2>&1
 then
     against=HEAD
 else
     against=$(git rev-list --max-parents=0 HEAD)
 fi
 
-exec 1 > &2
+exec 1>&2
 
 cpplint='python3 3rdparty/cpplint/cpplint.py'
 sum=0
