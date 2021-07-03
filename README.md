@@ -1,61 +1,47 @@
-# rm-2021-Code-Framework
-- **GCUROBOT-WOLF-TEAM RoboMaster-2021 Visual &amp; Algorithm Group Code Framework**
+## GCUROBOT-WOLF-TEAM RoboMaster-2021 Visual &amp; Algorithm Group Code Framework
 
-### 硬件配置
+### Hardware
 
 | drvices    | name                     |
 |:----------:|:------------------------:|
 |    PC      | Intel NUC8i5BEK4         |
 |  Camera    | MindVision MV-SUA134GC-T |
-| SerialPort | Normal USB to TTL        |
-|||
+| SerialPort | CP2102N                  |
 
-### 软件配置
+### Software
 
 | name           |        version                 |
 |:--------------:|:------------------------------:|
 | System         | Ubuntu 18.04.05 LTS            |
-| OpenCV         | [`4.4.0`](https://github.com/opencv/opencv/releases/tag/4.4.0)                               |
-| OpenCV-Contrib | [`4.4.0`](https://github.com/opencv/opencv_contrib/releases/tag/4.4.0)                |
-| Cmake          | [`3.10.2`](https://cmake.org/) |
-|||
+| OpenCV         | [`4.4.0`](https://github.com/opencv/opencv/releases/tag/4.4.0) |
+| OpenCV_Contrib | [`4.4.0`](https://github.com/opencv/opencv_contrib/releases/tag/4.4.0) |
+| CMake          | [`3.10.2`](https://cmake.org/) |
+| GCC            | [`7.5.0`](https://ftp.gnu.org/gnu/gcc/gcc-7.5.0/) |
+| GDB            | [`8.1.0`](https://www.gnu.org/software/gdb/download/) |
 
+### Contribute
 
-## 文件目录
-``` shell
-├── base/
-├── common/
-│   ├── camera_param/
-│   └── yolo/
-│       ├── classes/
-│       ├── model/
-│       └── weights/
-├── drvices/
-│   ├── camera/
-│   │   ├── RM_VideoCapture.cpp
-│   │   └── RM_VideoCapture.h
-│   └── serial/
-│       ├── RM_SerialPort.cpp
-│       └── RM_SerialPort.h
-├── module/
-│   ├── angle_solve
-│   │   ├── RM_SolvePNP.cpp
-│   │   └── RM_SolvePNP.h
-│   ├── armor/
-│   │   ├── RM_ArmorDetection.cpp
-│   │   └── RM_ArmorDetection.h
-│   ├── buff/
-│   │   ├── RM_BuffDetection.cpp
-│   │   └── RM_BuffDetection.h
-│   ├── filter/
-│   │   ├── RM_KalmanFilter.cpp
-│   │   └── RM_KalmanFilter.h
-│   ├── object_detection/
-│   │   ├── RM_ObjectDetection.cpp
-│   │   └── RM_ObjectDetection.h
-│   └── roi/
-│       ├── RM_ROI.cpp
-│       └── RM_ROI.h
-└── ...
+#### Guide
+
+Before start coding, please finish project configuration first:
+
+```shell
+sudo bash scripts/autoconfig.sh
 ```
 
+#### Rules
+
+- type: type of commit
+- feat: new feature
+- fix: modify the issue
+- refactor: code refactoring
+- docs: documentation changes
+- style: code formatting changes, not css changes
+- test: test case modifications
+- chore: other changes, such as build process, dependency management
+- scope: the scope of the commit, e.g. route, component, utils, build, etc.
+- subject: overview of the commit
+
+### License
+
+`MIT, Copyright GCUROBOT-WOLF-TEAM 2021`
