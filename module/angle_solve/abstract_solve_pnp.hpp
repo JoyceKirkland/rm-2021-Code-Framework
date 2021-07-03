@@ -4,6 +4,7 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
+
 struct Solvepnp_Cfg {
   int company = 1;
 
