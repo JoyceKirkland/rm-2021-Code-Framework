@@ -31,16 +31,13 @@ sudo bash scripts/autoconfig.sh
 
 #### Rules
 
-- type: type of commit
 - feat: new feature
 - fix: modify the issue
 - refactor: code refactoring
 - docs: documentation changes
-- style: code formatting changes, not css changes
+- style: code formatting changes
 - test: test case modifications
 - chore: other changes, such as build process, dependency management
-- scope: the scope of the commit, e.g. route, component, utils, build, etc.
-- subject: overview of the commit
 
 ### License
 
