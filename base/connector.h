@@ -1,7 +1,7 @@
 #ifndef LINKER_H_
 #define LINKER_H_
 
-#include "devices/camera/rm_video_capture.h"
+#include "rm_video_capture.h"
 
 struct UserParam
 {

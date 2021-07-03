@@ -7,13 +7,13 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra")
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
-# Use standard c++20
-set(CMAKE_CXX_STANDARD 20)
+# Use standard c++14
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Prefer posix threads
-set(THREADS_PREFER_PTHREAD_FLAG True)
-find_package(Threads REQUIRED)
+# set(THREADS_PREFER_PTHREAD_FLAG True)
+# find_package(Threads REQUIRED)
 
 # Find and add opencv as required
 find_package(OpenCV REQUIRED)
@@ -101,7 +101,7 @@ include_directories(${EXTRA_INCLUDES})
 # Add shared library link to target
 target_link_libraries(WolfVision
     PUBLIC
-    Threads::Threads
+    # Threads::Threads
     fmt::fmt-header-only
     ${OpenCV_LIBS}
 
@@ -109,8 +109,8 @@ target_link_libraries(WolfVision
     ${EXTRA_LIBS}
 )
 
-# Set WolfVision compile features to standared c++20
-target_compile_features(WolfVision PUBLIC cxx_std_20)
+# Set WolfVision compile features to standared c++14
+target_compile_features(WolfVision PUBLIC cxx_std_14)
 
 # Set built binary to ~/bin
 set(EXECUTABLE_OUTPUT_PATH "${PROJECT_BINARY_DIR}/bin")
