@@ -8,7 +8,7 @@ chmod +x scripts/cpplint-pre-commit.sh
 ln -sf '$(pwd)/scripts/cpplint-pre-commit.sh' .git/hooks/pre-commit
 
 # Configure mindvision sdk usb connect rules
-sudo ln -s 3rdparty/mindvision/linux/88-mvusb.rules /etc/udev/rules.d/
+sudo ln -sf 3rdparty/mindvision/linux/88-mvusb.rules /etc/udev/rules.d/
 
 # Update source
 sudo apt update
