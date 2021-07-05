@@ -1,5 +1,6 @@
-#include "connector.h"
+#include "connector.hpp"
 
-int main(){
-  Connector connector();
+int main() {
+  Connector connector;
+  connector.run();
 }

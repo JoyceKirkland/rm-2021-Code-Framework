@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <opencv2/opencv.hpp>
+
 namespace serial_port {
 /**
  * @brief 串口各个数组的长度设置
@@ -59,8 +60,8 @@ enum Robot_ID {
     */
 };
 typedef struct Serial_Config {
-  int set_bandrate = 1;
-  int show_serial_information = 1;
+  int set_bandrate = 0;
+  int show_serial_information = 0;
 
 } Serial_Cfg;
 /**
@@ -126,33 +127,33 @@ class SerialPort {
   Serial_Cfg serial_config_;
   Receive_Data receive_data_;
   Receive_Data last_receive_data_;
-
+  Write_Data write_data_;
   //串口标志量
   int fd;
-  int transform_arr[4];
+  int transform_arr_[4];
   unsigned char write_buff_[WRITE_BUFF_LENGTH];
   unsigned char crc_buff_[CRC_BUFF_LENGTH];
   unsigned char receive_buff_[REC_INFO_LENGTH];
   unsigned char receive_buff_temp_[REC_INFO_LENGTH * 2];
   // 高低八位的数据还原
   // 发送
-  int16_t _yaw_reduction;  // TODO:是否可以改为 uint16_t
-  int16_t _pitch_reduction;
-  int16_t _depth_reduction;
+  int16_t yaw_reduction_;  // TODO:是否可以改为 uint16_t
+  int16_t pitch_reduction_;
+  int16_t depth_reduction_;
 
   // 接收
-  int16_t _angle_reduction;  // TODO:是否可以改为 uint16_t
-  int16_t _acceleration_reduction;
+  int16_t angle_reduction_;  // TODO:是否可以改为 uint16_t
+  int16_t acceleration_reduction_;
 
   //交接返回值
-  unsigned char exchangebyte;
-  int16_t exchangebit;
+  unsigned char exchangebyte_;
+  int16_t exchangebit_;
 
   /** ---------- 函数声明 ---------- **/
   // CRC校验函数
-  uint8_t Checksum_CRC8(unsigned char* buf, uint16_t len);
+  uint8_t checksumCrc(unsigned char* buf, uint16_t len);
   // 数据分解函数
-  void getDataForCRC(const int& data_type, const int& is_shooting,
+  void getDataForCrc(const int& data_type, const int& is_shooting,
                      const int& _yaw, const int16_t& yaw, const int& _pitch,
                      const int16_t& pitch, const int16_t& depth);
   void getDataForSend(const int& data_type, const int& is_shooting,
@@ -183,28 +184,31 @@ class SerialPort {
 
   // 拆开成位 bit
   inline unsigned char returnHighBit(const int& Byte) {
-    exchangebyte = (Byte >> 8) & 0xff;
-    return exchangebyte;
+    exchangebyte_ = (Byte >> 8) & 0xff;
+    return exchangebyte_;
   }
   inline unsigned char returnLowBit(const int& Byte) {
-    exchangebyte = Byte & 0xff;
-    return exchangebyte;
+    exchangebyte_ = Byte & 0xff;
+    return exchangebyte_;
   }
 
   // 合成为字节 Byte
   inline int16_t mergeIntoBytes(const unsigned char& highbit,
                                 const unsigned char& lowbit) {
-    exchangebit = (highbit << 8) | (lowbit);
-    return exchangebit;
+    exchangebit_ = (highbit << 8) | (lowbit);
+    return exchangebit_;
   }
 
   //自定义串口发送
-  void RMserialWrite(const int& _yaw, const int16_t& yaw, const int& _pitch,
+  void rmSerialWrite(const int& _yaw, const int16_t& yaw, const int& _pitch,
                      const int16_t& pitch, const int16_t& depth,
                      const int& data_type = 0, const int& is_shooting = 0);
-  void RMserialWrite(Write_Data _write_data);
+  void rmSerialWrite();
+  void updataWriteData(const float _yaw, const float _pitch, const int _depth,
+                       int _data_type = 0, const int _is_shooting = 0);
+  void displayReceiveInformation();
   //接收并处理串口数据
-  void RMreceiveData();
+  void rmReceiveData();
   //判断是否接受到数据
   bool isEmpty();
   //更新串口接受数据

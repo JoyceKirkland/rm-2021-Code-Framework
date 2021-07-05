@@ -2,6 +2,7 @@
 #define CAMERA_PARAM_H_
 
 namespace mv_camera {
+
 enum EXPOSURETIME {
   /**
    * @brief 预设值曝光时间
@@ -11,6 +12,8 @@ enum EXPOSURETIME {
   EXPOSURE_2500 = 2500,
   EXPOSURE_1200 = 1200,
   EXPOSURE_800 = 800,
+  EXPOSURE_600 = 600,
+  EXPOSURE_400 = 400,
 };
 
 enum RESOLUTION {

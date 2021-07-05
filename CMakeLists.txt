@@ -117,6 +117,3 @@ set(EXECUTABLE_OUTPUT_PATH "${PROJECT_BINARY_DIR}/bin")
 
 # Set built library to ~/lib
 set(LIBRARY_OUTPUT_PATH "${PROJECT_BINARY_DIR}/lib")
-
-# Add test directory
-add_subdirectory(test)
