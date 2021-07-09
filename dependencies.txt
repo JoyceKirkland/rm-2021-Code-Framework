@@ -1,8 +1,0 @@
-git
-gcc
-gdb
-cmake
-libopencv-dev
-libfmt-dev
-libpthread-stubs0-dev
-python3-dev

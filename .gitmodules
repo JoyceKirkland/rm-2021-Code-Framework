@@ -1,6 +1,0 @@
-[submodule "3rdparty/fmt"]
-	path = 3rdparty/fmt
-	url = http://github.pem.app/fmtlib/fmt.git
-[submodule "3rdparty/cpplint"]
-	path = 3rdparty/cpplint
-	url = http://github.pem.app/cpplint/cpplint.git
