@@ -10,33 +10,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
+Change Dir: /home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_adcc0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_adcc0.dir/build.make CMakeFiles/cmTC_adcc0.dir/build
-make[1]: 进入目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_adcc0.dir/testCXXCompiler.cxx.o
-/usr/bin/x86_64-linux-gnu-g++-7     -o CMakeFiles/cmTC_adcc0.dir/testCXXCompiler.cxx.o -c /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_adcc0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_adcc0.dir/link.txt --verbose=1
-/usr/bin/x86_64-linux-gnu-g++-7       CMakeFiles/cmTC_adcc0.dir/testCXXCompiler.cxx.o  -o cmTC_adcc0 
-make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Run Build Command:"/usr/bin/make" "cmTC_70931/fast"
+/usr/bin/make -f CMakeFiles/cmTC_70931.dir/build.make CMakeFiles/cmTC_70931.dir/build
+make[1]: 进入目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_70931.dir/testCXXCompiler.cxx.o
+/usr/bin/x86_64-linux-gnu-g++-7     -o CMakeFiles/cmTC_70931.dir/testCXXCompiler.cxx.o -c /home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_70931
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70931.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-g++-7       CMakeFiles/cmTC_70931.dir/testCXXCompiler.cxx.o  -o cmTC_70931 
+make[1]: 离开目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
+Change Dir: /home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a8097/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a8097.dir/build.make CMakeFiles/cmTC_a8097.dir/build
-make[1]: 进入目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_a8097.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/x86_64-linux-gnu-g++-7     -o CMakeFiles/cmTC_a8097.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_a8097
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8097.dir/link.txt --verbose=1
-/usr/bin/x86_64-linux-gnu-g++-7      -v CMakeFiles/cmTC_a8097.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a8097 
+Run Build Command:"/usr/bin/make" "cmTC_7cab3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7cab3.dir/build.make CMakeFiles/cmTC_7cab3.dir/build
+make[1]: 进入目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_7cab3.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/x86_64-linux-gnu-g++-7     -o CMakeFiles/cmTC_7cab3.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_7cab3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cab3.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-g++-7      -v CMakeFiles/cmTC_7cab3.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_7cab3 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/x86_64-linux-gnu-g++-7
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -48,24 +48,24 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a8097' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccfodEtW.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a8097 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_a8097.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a8097' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7cab3' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccxf3l8P.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_7cab3 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_7cab3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7cab3' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: 离开目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a8097/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a8097.dir/build.make CMakeFiles/cmTC_a8097.dir/build]
-  ignore line: [make[1]: 进入目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”]
-  ignore line: [Building CXX object CMakeFiles/cmTC_a8097.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/x86_64-linux-gnu-g++-7     -o CMakeFiles/cmTC_a8097.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_a8097]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8097.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/x86_64-linux-gnu-g++-7      -v CMakeFiles/cmTC_a8097.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a8097 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_7cab3/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_7cab3.dir/build.make CMakeFiles/cmTC_7cab3.dir/build]
+  ignore line: [make[1]: 进入目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”]
+  ignore line: [Building CXX object CMakeFiles/cmTC_7cab3.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/x86_64-linux-gnu-g++-7     -o CMakeFiles/cmTC_7cab3.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_7cab3]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cab3.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/x86_64-linux-gnu-g++-7      -v CMakeFiles/cmTC_7cab3.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_7cab3 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/x86_64-linux-gnu-g++-7]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -77,13 +77,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a8097' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccfodEtW.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a8097 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_a8097.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7cab3' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccxf3l8P.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_7cab3 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_7cab3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccfodEtW.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccxf3l8P.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -101,7 +101,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_a8097] ==> ignore
+    arg [cmTC_7cab3] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -113,7 +113,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_a8097.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_7cab3.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -139,17 +139,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
+Change Dir: /home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_da960/fast"
-/usr/bin/make -f CMakeFiles/cmTC_da960.dir/build.make CMakeFiles/cmTC_da960.dir/build
-make[1]: 进入目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_da960.dir/feature_tests.cxx.o
-/usr/bin/x86_64-linux-gnu-g++-7    -std=c++1z -o CMakeFiles/cmTC_da960.dir/feature_tests.cxx.o -c /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_da960
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da960.dir/link.txt --verbose=1
-/usr/bin/x86_64-linux-gnu-g++-7       CMakeFiles/cmTC_da960.dir/feature_tests.cxx.o  -o cmTC_da960 
-make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Run Build Command:"/usr/bin/make" "cmTC_49954/fast"
+/usr/bin/make -f CMakeFiles/cmTC_49954.dir/build.make CMakeFiles/cmTC_49954.dir/build
+make[1]: 进入目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_49954.dir/feature_tests.cxx.o
+/usr/bin/x86_64-linux-gnu-g++-7    -std=c++1z -o CMakeFiles/cmTC_49954.dir/feature_tests.cxx.o -c /home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_49954
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49954.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-g++-7       CMakeFiles/cmTC_49954.dir/feature_tests.cxx.o  -o cmTC_49954 
+make[1]: 离开目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -212,17 +212,17 @@ make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeF
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
+Change Dir: /home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f7354/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f7354.dir/build.make CMakeFiles/cmTC_f7354.dir/build
-make[1]: 进入目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_f7354.dir/feature_tests.cxx.o
-/usr/bin/x86_64-linux-gnu-g++-7    -std=c++14 -o CMakeFiles/cmTC_f7354.dir/feature_tests.cxx.o -c /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f7354
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7354.dir/link.txt --verbose=1
-/usr/bin/x86_64-linux-gnu-g++-7       CMakeFiles/cmTC_f7354.dir/feature_tests.cxx.o  -o cmTC_f7354 
-make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Run Build Command:"/usr/bin/make" "cmTC_87531/fast"
+/usr/bin/make -f CMakeFiles/cmTC_87531.dir/build.make CMakeFiles/cmTC_87531.dir/build
+make[1]: 进入目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_87531.dir/feature_tests.cxx.o
+/usr/bin/x86_64-linux-gnu-g++-7    -std=c++14 -o CMakeFiles/cmTC_87531.dir/feature_tests.cxx.o -c /home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_87531
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87531.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-g++-7       CMakeFiles/cmTC_87531.dir/feature_tests.cxx.o  -o cmTC_87531 
+make[1]: 离开目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -285,17 +285,17 @@ make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeF
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
+Change Dir: /home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_26c49/fast"
-/usr/bin/make -f CMakeFiles/cmTC_26c49.dir/build.make CMakeFiles/cmTC_26c49.dir/build
-make[1]: 进入目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_26c49.dir/feature_tests.cxx.o
-/usr/bin/x86_64-linux-gnu-g++-7    -std=c++11 -o CMakeFiles/cmTC_26c49.dir/feature_tests.cxx.o -c /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_26c49
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26c49.dir/link.txt --verbose=1
-/usr/bin/x86_64-linux-gnu-g++-7       CMakeFiles/cmTC_26c49.dir/feature_tests.cxx.o  -o cmTC_26c49 
-make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Run Build Command:"/usr/bin/make" "cmTC_dfeb8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dfeb8.dir/build.make CMakeFiles/cmTC_dfeb8.dir/build
+make[1]: 进入目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_dfeb8.dir/feature_tests.cxx.o
+/usr/bin/x86_64-linux-gnu-g++-7    -std=c++11 -o CMakeFiles/cmTC_dfeb8.dir/feature_tests.cxx.o -c /home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_dfeb8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dfeb8.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-g++-7       CMakeFiles/cmTC_dfeb8.dir/feature_tests.cxx.o  -o cmTC_dfeb8 
+make[1]: 离开目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -358,17 +358,17 @@ make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeF
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
+Change Dir: /home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_72c3a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_72c3a.dir/build.make CMakeFiles/cmTC_72c3a.dir/build
-make[1]: 进入目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_72c3a.dir/feature_tests.cxx.o
-/usr/bin/x86_64-linux-gnu-g++-7    -std=c++98 -o CMakeFiles/cmTC_72c3a.dir/feature_tests.cxx.o -c /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_72c3a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72c3a.dir/link.txt --verbose=1
-/usr/bin/x86_64-linux-gnu-g++-7       CMakeFiles/cmTC_72c3a.dir/feature_tests.cxx.o  -o cmTC_72c3a 
-make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Run Build Command:"/usr/bin/make" "cmTC_5540b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5540b.dir/build.make CMakeFiles/cmTC_5540b.dir/build
+make[1]: 进入目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_5540b.dir/feature_tests.cxx.o
+/usr/bin/x86_64-linux-gnu-g++-7    -std=c++98 -o CMakeFiles/cmTC_5540b.dir/feature_tests.cxx.o -c /home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_5540b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5540b.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-g++-7       CMakeFiles/cmTC_5540b.dir/feature_tests.cxx.o  -o cmTC_5540b 
+make[1]: 离开目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -429,108 +429,16 @@ make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeF
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
+Change Dir: /home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_944de/fast"
-/usr/bin/make -f CMakeFiles/cmTC_944de.dir/build.make CMakeFiles/cmTC_944de.dir/build
-make[1]: 进入目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_944de.dir/CheckIncludeFile.cxx.o
-/usr/bin/x86_64-linux-gnu-g++-7    -Wall -Wextra    -std=gnu++14 -o CMakeFiles/cmTC_944de.dir/CheckIncludeFile.cxx.o -c /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
-Linking CXX executable cmTC_944de
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_944de.dir/link.txt --verbose=1
-/usr/bin/x86_64-linux-gnu-g++-7  -Wall -Wextra     CMakeFiles/cmTC_944de.dir/CheckIncludeFile.cxx.o  -o cmTC_944de 
-make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Run Build Command:"/usr/bin/make" "cmTC_1a704/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1a704.dir/build.make CMakeFiles/cmTC_1a704.dir/build
+make[1]: 进入目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_1a704.dir/CheckIncludeFile.cxx.o
+/usr/bin/x86_64-linux-gnu-g++-7    -Wall -Wextra    -std=gnu++14 -o CMakeFiles/cmTC_1a704.dir/CheckIncludeFile.cxx.o -c /home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_1a704
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a704.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-g++-7  -Wall -Wextra     CMakeFiles/cmTC_1a704.dir/CheckIncludeFile.cxx.o  -o cmTC_1a704 
+make[1]: 离开目录“/home/xx/桌面/tmp/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
 
-
-Performing C++ SOURCE FILE Test has_std_14_flag succeeded with the following output:
-Change Dir: /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_b4a94/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b4a94.dir/build.make CMakeFiles/cmTC_b4a94.dir/build
-make[1]: Entering directory '/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b4a94.dir/src.cxx.o
-/usr/bin/x86_64-linux-gnu-g++-7    -Wall -Wextra -Dhas_std_14_flag   -std=c++14 -std=gnu++14 -o CMakeFiles/cmTC_b4a94.dir/src.cxx.o -c /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_b4a94
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4a94.dir/link.txt --verbose=1
-/usr/bin/x86_64-linux-gnu-g++-7  -Wall -Wextra -Dhas_std_14_flag    CMakeFiles/cmTC_b4a94.dir/src.cxx.o  -o cmTC_b4a94 
-make[1]: Leaving directory '/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test has_std_1y_flag succeeded with the following output:
-Change Dir: /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_33c96/fast"
-/usr/bin/make -f CMakeFiles/cmTC_33c96.dir/build.make CMakeFiles/cmTC_33c96.dir/build
-make[1]: Entering directory '/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_33c96.dir/src.cxx.o
-/usr/bin/x86_64-linux-gnu-g++-7    -Wall -Wextra -Dhas_std_1y_flag   -std=c++1y -std=gnu++14 -o CMakeFiles/cmTC_33c96.dir/src.cxx.o -c /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_33c96
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33c96.dir/link.txt --verbose=1
-/usr/bin/x86_64-linux-gnu-g++-7  -Wall -Wextra -Dhas_std_1y_flag    CMakeFiles/cmTC_33c96.dir/src.cxx.o  -o cmTC_33c96 
-make[1]: Leaving directory '/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test SUPPORTS_USER_DEFINED_LITERALS succeeded with the following output:
-Change Dir: /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_a93dc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a93dc.dir/build.make CMakeFiles/cmTC_a93dc.dir/build
-make[1]: 进入目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_a93dc.dir/src.cxx.o
-/usr/bin/x86_64-linux-gnu-g++-7    -Wall -Wextra -DSUPPORTS_USER_DEFINED_LITERALS -std=c++14   -std=gnu++14 -o CMakeFiles/cmTC_a93dc.dir/src.cxx.o -c /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_a93dc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a93dc.dir/link.txt --verbose=1
-/usr/bin/x86_64-linux-gnu-g++-7  -Wall -Wextra -DSUPPORTS_USER_DEFINED_LITERALS -std=c++14    CMakeFiles/cmTC_a93dc.dir/src.cxx.o  -o cmTC_a93dc 
-make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
-
-Source file was:
-
-  void operator"" _udl(long double);
-  int main() {}
-Performing C++ SOURCE FILE Test FMT_HAS_VARIANT succeeded with the following output:
-Change Dir: /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_9d883/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9d883.dir/build.make CMakeFiles/cmTC_9d883.dir/build
-make[1]: 进入目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_9d883.dir/src.cxx.o
-/usr/bin/x86_64-linux-gnu-g++-7    -Wall -Wextra -DFMT_HAS_VARIANT -std=c++1z   -std=gnu++14 -o CMakeFiles/cmTC_9d883.dir/src.cxx.o -c /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_9d883
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d883.dir/link.txt --verbose=1
-/usr/bin/x86_64-linux-gnu-g++-7  -Wall -Wextra -DFMT_HAS_VARIANT -std=c++1z    CMakeFiles/cmTC_9d883.dir/src.cxx.o  -o cmTC_9d883 
-make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
-
-Source file was:
-
-  #include <variant>
-  int main() {}
-Determining if the strtod_l exist passed with the following output:
-Change Dir: /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_cb60d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cb60d.dir/build.make CMakeFiles/cmTC_cb60d.dir/build
-make[1]: 进入目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_cb60d.dir/CheckSymbolExists.cxx.o
-/usr/bin/x86_64-linux-gnu-g++-7    -Wall -Wextra    -std=gnu++14 -o CMakeFiles/cmTC_cb60d.dir/CheckSymbolExists.cxx.o -c /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-Linking CXX executable cmTC_cb60d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb60d.dir/link.txt --verbose=1
-/usr/bin/x86_64-linux-gnu-g++-7  -Wall -Wextra     CMakeFiles/cmTC_cb60d.dir/CheckSymbolExists.cxx.o  -o cmTC_cb60d 
-make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
-
-File /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
-/* */
-#include <stdlib.h>
-
-int main(int argc, char** argv)
-{
-  (void)argv;
-#ifndef strtod_l
-  return ((int*)(&strtod_l))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
-}
 

@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7 -fPIC -Wall -Wextra -g  -shared -Wl,-soname,libwv-module-object-detection.so -o lib/libwv-module-object-detection.so CMakeFiles/wv-module-object-detection.dir/module/object_detection/rm_dnn_yolov4.cpp.o  -L/usr/local/cuda/lib64 

@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7 -fPIC -Wall -Wextra -g  -shared -Wl,-soname,libwv-module-roi.so -o lib/libwv-module-roi.so CMakeFiles/wv-module-roi.dir/module/roi/rm_roi.cpp.o  -L/usr/local/cuda/lib64 

@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7 -fPIC -Wall -Wextra -g  -shared -Wl,-soname,libwv-module-angle-solve.so -o lib/libwv-module-angle-solve.so CMakeFiles/wv-module-angle-solve.dir/module/angle_solve/rm_solve_pnp.cpp.o  -L/usr/local/cuda/lib64 

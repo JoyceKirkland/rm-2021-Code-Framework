@@ -1,2 +1,0 @@
-/home/xx/桌面/lost/rm-2021-Code-Framework/test/build/CMakeFiles/rebuild_cache.dir
-/home/xx/桌面/lost/rm-2021-Code-Framework/test/build/CMakeFiles/edit_cache.dir

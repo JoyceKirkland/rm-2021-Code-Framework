@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7 -fPIC -Wall -Wextra -g  -shared -Wl,-soname,libwv-devices-serial.so -o lib/libwv-devices-serial.so CMakeFiles/wv-devices-serial.dir/devices/serial/rm_serial_port.cpp.o  -L/usr/local/cuda/lib64 
