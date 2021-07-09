@@ -1,0 +1,35 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0f5f8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0f5f8.dir/build.make CMakeFiles/cmTC_0f5f8.dir/build
+make[1]: 进入目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_0f5f8.dir/CheckSymbolExists.cxx.o
+/usr/bin/x86_64-linux-gnu-g++-7    -Wall -Wextra    -std=gnu++14 -o CMakeFiles/cmTC_0f5f8.dir/CheckSymbolExists.cxx.o -c /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_0f5f8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f5f8.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-g++-7  -Wall -Wextra     CMakeFiles/cmTC_0f5f8.dir/CheckSymbolExists.cxx.o  -o cmTC_0f5f8 
+CMakeFiles/cmTC_0f5f8.dir/CheckSymbolExists.cxx.o：在函数‘main’中：
+CheckSymbolExists.cxx:(.text+0x1b)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0f5f8.dir/build.make:97: recipe for target 'cmTC_0f5f8' failed
+make[1]: *** [cmTC_0f5f8] Error 1
+make[1]: 离开目录“/home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp”
+Makefile:126: recipe for target 'cmTC_0f5f8/fast' failed
+make: *** [cmTC_0f5f8/fast] Error 2
+
+File /home/xx/桌面/lost/rm-2021-Code-Framework/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

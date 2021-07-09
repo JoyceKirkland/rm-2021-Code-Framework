@@ -1,0 +1,1 @@
+/usr/bin/x86_64-linux-gnu-g++-7 -fPIC -Wall -Wextra -g  -shared -Wl,-soname,libwv-module-armor.so -o lib/libwv-module-armor.so CMakeFiles/wv-module-armor.dir/module/armor/rm_armor_detection.cpp.o  -L/usr/local/cuda/lib64 
